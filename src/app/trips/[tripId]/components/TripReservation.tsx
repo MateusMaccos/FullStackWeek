@@ -32,19 +32,20 @@ const TripReservation = ({ tripId, pricePerDay, maxGuests, tripEndDate, tripStar
 
     const router = useRouter()
 
-    const onSubmit = async (data: any) => {
-        const response = await fetch('http://localhost:3000/api/trips/check', {
+    const onSubmit = async (data: TripReservationForm) => {
+        const response = await fetch('/api/trips/check', {
             method: 'POST',
             body: Buffer.from(
                 JSON.stringify({
                     startDate: data.startDate,
                     endDate: data.endDate,
-                    tripId
+                    tripId,
                 })
             )
         })
 
         const res = await response.json()
+
         if (res?.error?.code === 'TRIP_ALREADY_RESERVED') {
             setError("startDate", {
                 type: "manual",
