@@ -7,7 +7,9 @@ import React from 'react'
 import { useForm, Controller } from 'react-hook-form'
 
 interface TripReservationProps {
-    trip: Trip
+    tripStartDate: Date
+    tripEndDate: Date
+    maxGuests: number
 }
 
 interface TripReservationForm {
@@ -16,12 +18,19 @@ interface TripReservationForm {
     endDate: Date | null
 }
 
-const TripReservation = ({ trip }: TripReservationProps) => {
-    const { register, handleSubmit, formState: { errors }, control } = useForm<TripReservationForm>()
+const TripReservation = ({ maxGuests, tripEndDate, tripStartDate }: TripReservationProps) => {
+    const { register,
+        handleSubmit,
+        formState: { errors },
+        control,
+        watch
+    } = useForm<TripReservationForm>()
 
     const onSubmit = (data: any) => {
         console.log({ data })
     }
+
+    const startDate = watch("startDate")
 
     return (
 
@@ -40,7 +49,9 @@ const TripReservation = ({ trip }: TripReservationProps) => {
                             errorMessage={errors?.startDate?.message} placeholderText='Data de Início'
                             onChange={field.onChange}
                             selected={field.value}
-                            className='w-full' />}
+                            className='w-full'
+                            minDate={tripStartDate}
+                        />}
                 />
                 <Controller name='endDate' rules={{
                     required: {
@@ -55,7 +66,10 @@ const TripReservation = ({ trip }: TripReservationProps) => {
                             errorMessage={errors?.endDate?.message} placeholderText='Data Final'
                             onChange={field.onChange}
                             selected={field.value}
-                            className='w-full' />}
+                            className='w-full'
+                            maxDate={tripEndDate}
+                            minDate={startDate ?? tripStartDate}
+                        />}
                 />
             </div>
             <Input {...register('guests', {
@@ -63,7 +77,7 @@ const TripReservation = ({ trip }: TripReservationProps) => {
                     value: true,
                     message: 'Número de hóspedes é obrigatório'
                 },
-            })} placeholder={`Número de hóspedes (max ${trip.maxGuests})`}
+            })} placeholder={`Número de hóspedes (max ${maxGuests})`}
                 className='mt-4'
                 error={!!errors?.guests}
                 errorMessage={errors?.guests?.message}

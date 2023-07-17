@@ -14,7 +14,6 @@ const getTripDetails = async (tripId: string) => {
     })
     return trip
 }
-//00:21:18
 const TripDetails = async ({ params }: { params: { tripId: string } }) => {
     const trip = await getTripDetails(params.tripId)
 
@@ -24,7 +23,7 @@ const TripDetails = async ({ params }: { params: { tripId: string } }) => {
         <div className='container mx-auto'>
             <TripHeader trip={trip} />
             {/* Reserva */}
-            <TripReservation trip={trip} />
+            <TripReservation tripStartDate={trip.startDate} tripEndDate={trip.endDate} maxGuests={trip.maxGuests} />
             <TripDescription description={trip.description} />
             <TripHighlights highlights={trip.highlights} />
             <TripLocation location={trip.location} locationDescription={trip.locationDescription} />
