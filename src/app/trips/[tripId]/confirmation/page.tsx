@@ -1,5 +1,8 @@
 'use client'
+import Button from '@/components/Button'
 import { Trip } from '@prisma/client'
+import { format } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
 import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
@@ -7,6 +10,7 @@ import ReactCountryFlag from 'react-country-flag'
 
 const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
     const [trip, setTrip] = useState<Trip | null>()
+    const [totalPrice, setTotalPrice] = useState<number>(0)
 
     const searchParams = useSearchParams()
 
@@ -20,8 +24,9 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
                     endDate: searchParams.get('endDate')
                 })
             })
-            const { trip } = await response.json()
+            const { trip, totalPrice } = await response.json()
             setTrip(trip)
+            setTotalPrice(totalPrice)
         }
         fetchTrip()
     }, [])
@@ -29,6 +34,10 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
     console.log({ trip })
 
     if (!trip) return null
+
+    const startDate = new Date(searchParams.get("startDate") as string)
+    const endDate = new Date(searchParams.get("endDate") as string)
+    const guests = searchParams.get("guests")
 
     return (
         <div className="container mx-auto p-5">
@@ -39,7 +48,7 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
                         <Image className='rounded-lg' src={trip.coverImage} fill style={{ objectFit: "cover" }} alt={trip.name} />
                     </div>
                     <div className="flex flex-col">
-                        <h2 className='text-xl text-primaryDarker font-semibold'></h2>
+                        <h2 className='text-xl text-primaryDarker font-semibold'>{trip.name}</h2>
                         <div className="flex gap-1 items-center">
                             <ReactCountryFlag countryCode={trip.countryCode} svg />
                             <p className='text-xs text-grayPrimary underline'>{trip.location}</p>
@@ -49,7 +58,28 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
 
 
                 </div>
+                <div className='font-semibold text-lg text-primaryDarker mt-3'>Informações sobre o preço</div>
+                <div className="flex justify-between mt-1">
+                    <p className='text-primaryDarker'>
+                        Total:
+                    </p>
+                    <p className='font-medium'>R${totalPrice}</p>
+                </div>
             </div>
+            <div className="flex flex-col mt-5 text-primaryDarker">
+                <h3 className='font-semibold'>Date</h3>
+                <div className="flex items-center gap-1 mt-1">
+                    <p>{format(startDate, "dd 'de' MMMM", { locale: ptBR })}</p>
+                    {" - "}
+                    <p>{format(endDate, "dd 'de' MMMM", { locale: ptBR })}</p>
+                </div>
+                <h3 className='font-semibold mt-5'>Hóspedes</h3>
+                <p>{guests} hóspedes</p>
+
+                <Button className='mt-5'>Finalizar Compra</Button>
+            </div>
+
+
         </div>
     )
 }
