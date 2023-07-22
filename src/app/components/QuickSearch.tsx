@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const QuickSearch = () => {
@@ -11,19 +12,27 @@ const QuickSearch = () => {
             </div>
             <div className="flex w-full justify-between mt-5">
                 <div className="flex flex-col items-center gap-1">
-                    <Image width={35} height={35} src="/hotel-icon.png" alt='Hotel' />
+                    <Link href={`/trips/search?text=hotel`} className='flex flex-col items-center hover:text-primary transition-all'>
+                        <Image width={35} height={35} src="/hotel-icon.png" alt='Hotel' />
+                    </Link>
                     <p className='text-sm text-grayPrimary'>Hotel</p>
                 </div>
                 <div className="flex flex-col items-center gap-1">
-                    <Image width={35} height={35} src="/farm-icon.png" alt='Hotel' />
+                    <Link href={`/trips/search?text=fazenda`} className='flex flex-col items-center hover:text-primary transition-all'>
+                        <Image width={35} height={35} src="/farm-icon.png" alt='Fazenda' />
+                    </Link>
                     <p className='text-sm text-grayPrimary'>Fazenda</p>
                 </div>
                 <div className="flex flex-col items-center gap-1">
-                    <Image width={35} height={35} src="/cottage-icon.png" alt='Hotel' />
+                    <Link href={`/trips/search?text=Chalé`} className='flex flex-col items-center hover:text-primary transition-all'>
+                        <Image width={35} height={35} src="/cottage-icon.png" alt='Chalé' />
+                    </Link>
                     <p className='text-sm text-grayPrimary'>Chalé</p>
                 </div>
                 <div className="flex flex-col items-center gap-1">
-                    <Image width={35} height={35} src="/inn-icon.png" alt='Hotel' />
+                    <Link href={`/trips/search?text=pousada`} className='flex flex-col items-center hover:text-primary transition-all'>
+                        <Image width={35} height={35} src="/inn-icon.png" alt='Pousada' />
+                    </Link>
                     <p className='text-sm text-grayPrimary'>Pousada</p>
                 </div>
             </div>
