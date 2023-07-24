@@ -4,7 +4,7 @@
 
 ## 📚 Resumo
 
-> Este repositório é um projeto de reservas de serviços que oferece uma experiência simples e conveniente para os usuários agendarem seus compromissos com prestadores de serviços locais. O aplicativo é construído utilizando as tecnologias modernas Next.js, Prisma, Tailwind CSS, Yarn, Stripe e TypeScript, garantindo um desempenho excepcional, usabilidade e segurança.
+> Este repositório é um projeto de reservas de serviços que oferece uma experiência simples e conveniente para os usuários agendarem seus compromissos com prestadores de serviços locais. O aplicativo é construído utilizando as tecnologias modernas Next.js, Prisma, Tailwind CSS, Yarn, Stripe, TypeScript e JavaScript, garantindo um desempenho excepcional, usabilidade e segurança.
 
 - Aplicativo responsivo para Android e Web
 <img align="center" alt="Android" height="30" width="40" src="https://cdn-icons-png.flaticon.com/512/174/174836.png"> <img align="center" alt="Desktop" height="30" width="30" src="https://img.icons8.com/?size=512&id=iCwcOoy8tOGw&format=png">
@@ -24,6 +24,8 @@ Gerenciamento de Reservas: Os usuários têm acesso a uma área onde podem ver e
 Pagamento Seguro: O aplicativo integra o Stripe para processamento de pagamentos, garantindo transações seguras e protegidas para os usuários e os prestadores de serviços. (no momento apenas em teste)
 
 # Tecnologias Utilizadas:
+
+<img align="center" alt="Android" height="30" width="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"> JavaScript: linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.
 
 <img align="center" alt="Android" height="30" width="30" src="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png"> Next.js: Next.js é um framework de React que permite criar aplicativos web rápidos e escaláveis com renderização do lado do servidor e roteamento fácil.
 
