@@ -28,7 +28,7 @@ const Header = () => {
     }
 
     return (
-        <div className="container mx-auto p-5 py-0 h-[93px] flex justify-between items-center">
+        <div className="container mx-auto p-5 py-0 h-[93px] flex justify-between items-center lg:border-b lg:border-l-grayLighter">
             <Link href='/'>
                 <div className='relative h-[32px] w-[182px]'>
                     <Image src="/LogoFTW.png" alt='FullStackWeek' fill />
