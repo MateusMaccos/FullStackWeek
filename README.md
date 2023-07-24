@@ -44,24 +44,24 @@ O projeto é uma solução completa para a reserva de serviços que alia tecnolo
 ## Imagens do Aplicativo:
 
 ### Página inicial
-![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/3ed04db5-ef7e-4e14-9f4d-8d4c77c76ff5)
+![image](https://github.com/MateusMaccos/FullStackWeek/blob/main/public/mainpage.png)
 
 ### Página de busca
-![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/4c33475a-17db-4800-9292-9b0f65da76a8)
+![image](https://github.com/MateusMaccos/FullStackWeek/blob/main/public/search.png)
 
 ### Página 1/2 da viagem
-![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/012b2255-d493-4864-8c0f-f9ddf25fb49d)
+![image](https://github.com/MateusMaccos/FullStackWeek/blob/main/public/hotelpage1.png)
 
 ### Página 2/2 da viagem
-![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/1b75b397-b59d-4388-a393-4ce296f39856)
+![image](https://github.com/MateusMaccos/FullStackWeek/blob/main/public/hotelpage2.png)
 
 ### Página Minhas viagens
-![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/87605a2c-a590-4208-bbb8-6e97b5f82ea1)
+![image](https://github.com/MateusMaccos/FullStackWeek/blob/main/public/mytrips.png)
 
 ### Página de confirmação
-![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/8b9835d5-5125-4764-94cc-1dc14694a155)
+![image](https://github.com/MateusMaccos/FullStackWeek/blob/main/public/confirmation%20-%20Copia.png)
 
 ### Página de pagamento do stripe
-![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/3cb5e604-765c-4362-9dce-60252d2c894c)
+![image](https://github.com/MateusMaccos/FullStackWeek/blob/main/public/payment.png)
 
 
