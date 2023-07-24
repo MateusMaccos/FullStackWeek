@@ -42,3 +42,26 @@ O projeto é uma solução completa para a reserva de serviços que alia tecnolo
 ---
 
 ## Imagens do Aplicativo:
+
+### Página inicial
+![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/3ed04db5-ef7e-4e14-9f4d-8d4c77c76ff5)
+
+### Página de busca
+![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/4c33475a-17db-4800-9292-9b0f65da76a8)
+
+### Página 1/2 da viagem
+![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/012b2255-d493-4864-8c0f-f9ddf25fb49d)
+
+### Página 2/2 da viagem
+![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/1b75b397-b59d-4388-a393-4ce296f39856)
+
+### Página Minhas viagens
+![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/87605a2c-a590-4208-bbb8-6e97b5f82ea1)
+
+### Página de confirmação
+![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/8b9835d5-5125-4764-94cc-1dc14694a155)
+
+### Página de pagamento do stripe
+![image](https://github.com/MateusMaccos/FullStackWeek/assets/75508372/3cb5e604-765c-4362-9dce-60252d2c894c)
+
+
